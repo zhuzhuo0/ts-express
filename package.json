@@ -8,6 +8,7 @@
   "license": "MIT",
   "devDependencies": {
     "husky": "^2.4.1",
+    "nodemon": "^1.19.1",
     "ts-node": "^8.3.0",
     "tslint": "^5.17.0",
     "typescript": "^3.5.2"
@@ -16,5 +17,17 @@
     "hooks": {
       "pre-commit": "yarn tslint -c tslint.json 'app.ts'"
     }
+  },
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^4.0.9",
+    "typeorm": "^0.2.18"
+  },
+  "scripts": {
+    "dev":"nodemon --config nodemon.json src/index.ts"
   }
 }
